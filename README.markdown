@@ -9,7 +9,7 @@ Vinaora Nice Slideshow
 
 Overview
 --------
-Vinaora Visitors Counter is a famous and nice counter module for Joomla!. This module shows you the number visitors of your site by day, by week, by month. And this module is now used in thousands of websites.
+[Vinaora Visitors Counter](http://vinaora.com/vinaora-visitors-counter/) is a famous and nice counter module for Joomla!. This module shows you the number visitors of your site by day, by week, by month. And this module is now used in thousands of websites.
 
 Features
 --------
