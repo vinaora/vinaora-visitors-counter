@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+	<name>Vinaora Visitors Counter</name>
+	<author>VINAORA</author>
+	<creationDate>Apr 2012</creationDate>
+	<copyright>Copyright (C) 2007-2012 VINAORA. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@vinaora.com</authorEmail>
+	<authorUrl>http://vinaora.com</authorUrl>
+	<version>2.5.1</version>
+	<description>MOD_VVISIT_COUNTER_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_vvisit_counter">mod_vvisit_counter.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>fields</folder>
+		<folder>helper</folder>
+		<folder>tmpl</folder>
+	</files>
+
+	<media folder="media" destination="mod_vvisit_counter">
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>digit_counter</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>stats</folder>
+	</media>
+
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_vvisit_counter.ini</language>
+		<language tag="en-GB">language/en-GB.mod_vvisit_counter.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="modules/mod_vvisit_counter/fields">
+			<fieldset name="basic">
+				<field name="initialvalue" type="text" default="0" label="MOD_VVISIT_COUNTER_FIELD_INITIAL_VALUE" description="MOD_VVISIT_COUNTER_FIELD_INITIAL_VALUE_DESC" />
+				<field name="visit_type" type="list" default="visits" label="MOD_VVISIT_COUNTER_FIELD_VISIT_TYPE" description="MOD_VVISIT_COUNTER_FIELD_VISIT_TYPE_DESC">
+					<option value="visits">MOD_VVISIT_COUNTER_OPTION_VISIT_TYPE_VISITS</option>
+					<option value="guests">MOD_VVISIT_COUNTER_OPTION_VISIT_TYPE_GUESTS</option>
+					<option value="bots">MOD_VVISIT_COUNTER_OPTION_VISIT_TYPE_BOTS</option>
+					<option value="members">MOD_VVISIT_COUNTER_OPTION_VISIT_TYPE_MEMBERS</option>
+				</field>
+				<field name="mode" type="hidden" default="custom" label="MOD_VVISIT_COUNTER_FIELD_MODE" description="MOD_VVISIT_COUNTER_FIELD_MODE_DESC">
+					<option value="simple">MOD_VVISIT_COUNTER_OPTION_MODE_SIMPLE</option>
+					<option value="standard">MOD_VVISIT_COUNTER_OPTION_MODE_STANDARD</option>
+					<option value="full">MOD_VVISIT_COUNTER_OPTION_MODE_FULL</option>
+					<option value="custom">MOD_VVISIT_COUNTER_OPTION_MODE_CUSTOM</option>
+				</field>
+				<field name="digit_type" type="filelist" default="default" hide_default="true" label="MOD_VVISIT_COUNTER_FIELD_COUNTER_TYPE" description="MOD_VVISIT_COUNTER_FIELD_COUNTER_TYPE_DESC" directory="media/mod_vvisit_counter/digit_counter/" filter="[^\s]+(?i)(\.css)$" exclude="" stripext=".css"/>
+				<field name="number_digits" type="integer" default="6" label="MOD_VVISIT_COUNTER_FIELD_NUMBER_DIGITS" description="MOD_VVISIT_COUNTER_FIELD_NUMBER_DIGITS_DESC" first="1" last="9" step="1" />
+				<field name="stats_type" type="filelist" default="default" hide_default="true" label="MOD_VVISIT_COUNTER_FIELD_STATS_TYPE" description="MOD_VVISIT_COUNTER_FIELD_STATS_TYPE_DESC" directory="media/mod_vvisit_counter/stats/" filter="[^\s]+(?i)(\.css)$" exclude="" stripext=".css"/>
+				<field type="spacer" name="@spacer01" hr="true" />
+				<field name="today" type="text" default="Today" label="MOD_VVISIT_COUNTER_FIELD_TODAY" description="MOD_VVISIT_COUNTER_FIELD_ZERO" size="35" />
+				<field name="yesterday" type="text" default="Yesterday" label="MOD_VVISIT_COUNTER_FIELD_YESTERDAY" description="MOD_VVISIT_COUNTER_FIELD_ZERO" size="35" />
+				<field name="xweek" type="text" default="This Week" label="MOD_VVISIT_COUNTER_FIELD_XWEEK" description="MOD_VVISIT_COUNTER_FIELD_ZERO" size="35" />
+				<field name="lweek" type="text" default="Last Week" label="MOD_VVISIT_COUNTER_FIELD_LWEEK" description="MOD_VVISIT_COUNTER_FIELD_ZERO" size="35" />
+				<field name="xmonth" type="text" default="This Month" label="MOD_VVISIT_COUNTER_FIELD_XMONTH" description="MOD_VVISIT_COUNTER_FIELD_ZERO" size="35" />
+				<field name="lmonth" type="text" default="Last Month" label="MOD_VVISIT_COUNTER_FIELD_LMONTH" description="MOD_VVISIT_COUNTER_FIELD_ZERO" size="35" />
+				<field name="all" type="text" default="All days" label="MOD_VVISIT_COUNTER_FIELD_ALL" description="MOD_VVISIT_COUNTER_FIELD_ZERO" size="35" />
+				<field type="spacer" name="@spacer02" hr="true" />
+				<field name="showip" type="text" default="Your IP:" label="MOD_VVISIT_COUNTER_FIELD_SHOWIP" description="MOD_VVISIT_COUNTER_FIELD_ZERO" size="35" />
+				<field name="nowis" type="text" default="Server Time: %Y-%m-%d %H:%M:%S" label="MOD_VVISIT_COUNTER_FIELD_NOWIS" description="MOD_VVISIT_COUNTER_FIELD_ZERO" size="35" />
+				<field name="firstday" type="list" default="0" label="MOD_VVISIT_COUNTER_FIELD_FIRSTDAY" description="MOD_VVISIT_COUNTER_FIELD_FIRSTDAY_DESC">
+					<option value="0">SUNDAY</option>
+					<option value="1">MONDAY</option>
+					<option value="2">TUESDAY</option>
+					<option value="3">WEDNESDAY</option>
+					<option value="4">THURSDAY</option>
+					<option value="5">FRIDAY</option>
+					<option value="6">SATURDAY</option>
+				</field>
+				<field name="autohide" type="radio" default="0" label="MOD_VVISIT_COUNTER_FIELD_AUTOHIDE" description="MOD_VVISIT_COUNTER_FIELD_AUTOHIDE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="hrfooter" type="radio" default="1" label="MOD_VVISIT_COUNTER_FIELD_FOOTER_HORIZONTAL" description="MOD_VVISIT_COUNTER_FIELD_FOOTER_HORIZONTAL_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field type="spacer" name="@spacer03" hr="true" />
+				<field name="width" type="text" default="" label="MOD_VVISIT_COUNTER_FIELD_WIDTH" description="MOD_VVISIT_COUNTER_FIELD_WIDTH_DESC" />
+				<field name="bg" type="radio" default="0" label="MOD_VVISIT_COUNTER_FIELD_BACKGROUND" description="MOD_VVISIT_COUNTER_FIELD_BACKGROUND_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="bgcolor" type="colorpicker" default="#ffffff" label="MOD_VVISIT_COUNTER_FIELD_BACKGROUND_COLOR" description="MOD_VVISIT_COUNTER_FIELD_BACKGROUND_COLOR_DESC" />
+				<field type="spacer" name="@spacer04" hr="true" />
+				<field name="bd" type="radio" default="1" label="MOD_VVISIT_COUNTER_FIELD_BORDER" description="MOD_VVISIT_COUNTER_FIELD_BORDER_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="bdcolor" type="colorpicker" default="#000000" label="MOD_VVISIT_COUNTER_FIELD_BORDER_COLOR" description="MOD_VVISIT_COUNTER_FIELD_BORDER_COLOR_DESC" />
+				<field name="bdwidth" type="text" default="10" label="MOD_VVISIT_COUNTER_FIELD_BORDER_WIDTH" description="MOD_VVISIT_COUNTER_FIELD_BORDER_WIDTH_DESC" />
+				<field name="bdrounded" type="radio" default="1" label="MOD_VVISIT_COUNTER_FIELD_BORDER_ROUNDED" description="MOD_VVISIT_COUNTER_FIELD_BORDER_ROUNDED_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="bdshadow" type="radio" default="1" label="MOD_VVISIT_COUNTER_FIELD_BORDER_SHADOW" description="MOD_VVISIT_COUNTER_FIELD_BORDER_SHADOW_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field type="spacer" name="@spacer05" hr="true" />
+				<field name="customcss" type="textarea" rows="9" cols="30" default="#vvisit_counter{padding:5px;}" label="MOD_VVISIT_COUNTER_FIELD_CUSTOMCSS" description="MOD_VVISIT_COUNTER_FIELD_CUSTOMCSS_DESC"/>
+				<field name="home" type="hidden" default="PGRpdiBzdHlsZT0ibWFyZ2luLXRvcDo1cHg7Ij48YSBocmVmPSJodHRwOi8vdmluYW9yYS5jb20vIiB0aXRsZT0iVmluYW9yYSBWaXNpdG9ycyBDb3VudGVyIiB0YXJnZXQ9Il9ibGFuayI+VmlzaXRvcnMgQ291bnRlcjwvYT48L2Rpdj48L2Rpdj4NCjwhLS0gVmluYW9yYSBWaXNpdG9ycyBDb3VudGVyID4+IGh0dHA6Ly92aW5hb3JhLmNvbS8gLS0+" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" size="40" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field name="cachemode" type="hidden" default="static">
+					<option value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

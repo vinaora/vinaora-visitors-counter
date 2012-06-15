@@ -1,0 +1,21 @@
+/* led-green */
+.vdigit-0,
+.vdigit-1,
+.vdigit-2,
+.vdigit-3,
+.vdigit-4,
+.vdigit-5,
+.vdigit-6,
+.vdigit-7,
+.vdigit-8,
+.vdigit-9{width:16px;height:21px;background:url(led-green.png) no-repeat top left;text-indent:-999em;display:inline-block;}
+.vdigit-0{background-position:0 0;}
+.vdigit-1{background-position:-32px 0;}
+.vdigit-2{background-position:-64px 0;}
+.vdigit-3{background-position:-96px 0;}
+.vdigit-4{background-position:-128px 0;}
+.vdigit-5{background-position:-160px 0;}
+.vdigit-6{background-position:-192px 0;}
+.vdigit-7{background-position:-224px 0;}
+.vdigit-8{background-position:-256px 0;}
+.vdigit-9{background-position:-288px 0;}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="2.5.0" method="upgrade">
+	<name>Vinaora Visitors Counter [Package]</name>
+	<author>VINAORA</author>
+	<creationDate>Apr 2012</creationDate>
+	<copyright>Copyright (C) 2007-2012 VINAORA. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@vinaora.com</authorEmail>
+	<authorUrl>http://vinaora.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PKG_VVISIT_COUNTER_XML_DESCRIPTION</description>
+	<packagename>vvisit_counter</packagename>
+	<url>http://vinaora.com/</url>
+	<packager>Vinaora Visitors Counter [Package]</packager>
+	<packagerurl>http://vinaora.com/</packagerurl>
+	<files folder="packages">
+		<file type="plugin" id="vvisit_counter" group="system">plg_vvisit_counter.zip</file>
+		<file type="module" id="mod_vvisit_counter" client="site">mod_vvisit_counter.zip</file>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB.pkg_vvisit_counter.ini</language>
+		<language tag="en-GB">en-GB.pkg_vvisit_counter.sys.ini</language>
+	</languages>
+	<scriptfile>pkg_vvisit_counter.script.php</scriptfile>
+</extension>

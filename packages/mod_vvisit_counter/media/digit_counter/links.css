@@ -1,0 +1,21 @@
+/* links */
+.vdigit-0,
+.vdigit-1,
+.vdigit-2,
+.vdigit-3,
+.vdigit-4,
+.vdigit-5,
+.vdigit-6,
+.vdigit-7,
+.vdigit-8,
+.vdigit-9{width:15px;height:13px;background:url(links.png) no-repeat top left;text-indent:-999em;display:inline-block;}
+.vdigit-0{background-position:0 0;}
+.vdigit-1{background-position:-30px 0;}
+.vdigit-2{background-position:-60px 0;}
+.vdigit-3{background-position:-90px 0;}
+.vdigit-4{background-position:-120px 0;}
+.vdigit-5{background-position:-150px 0;}
+.vdigit-6{background-position:-180px 0;}
+.vdigit-7{background-position:-210px 0;}
+.vdigit-8{background-position:-240px 0;}
+.vdigit-9{background-position:-270px 0;}

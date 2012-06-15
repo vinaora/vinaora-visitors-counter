@@ -1,0 +1,21 @@
+/* gold */
+.vdigit-0,
+.vdigit-1,
+.vdigit-2,
+.vdigit-3,
+.vdigit-4,
+.vdigit-5,
+.vdigit-6,
+.vdigit-7,
+.vdigit-8,
+.vdigit-9{width:18px;height:19px;background:url(gold.png) no-repeat top left;text-indent:-999em;display:inline-block;}
+.vdigit-0{background-position:0 0;}
+.vdigit-1{background-position:-36px 0;}
+.vdigit-2{background-position:-68px 0;}
+.vdigit-3{background-position:-104px 0;}
+.vdigit-4{background-position:-140px 0;}
+.vdigit-5{background-position:-176px 0;}
+.vdigit-6{background-position:-212px 0;}
+.vdigit-7{background-position:-248px 0;}
+.vdigit-8{background-position:-284px 0;}
+.vdigit-9{background-position:-320px 0;}

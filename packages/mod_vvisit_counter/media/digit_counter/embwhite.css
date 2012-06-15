@@ -1,0 +1,21 @@
+/* embwhite */
+.vdigit-0,
+.vdigit-1,
+.vdigit-2,
+.vdigit-3,
+.vdigit-4,
+.vdigit-5,
+.vdigit-6,
+.vdigit-7,
+.vdigit-8,
+.vdigit-9{width:20px;height:24px;background:url(embwhite.png) no-repeat top left;text-indent:-999em;display:inline-block;}
+.vdigit-0{background-position:0 0;}
+.vdigit-1{background-position:-40px 0;}
+.vdigit-2{background-position:-80px 0;}
+.vdigit-3{background-position:-120px 0;}
+.vdigit-4{background-position:-160px 0;}
+.vdigit-5{background-position:-200px 0;}
+.vdigit-6{background-position:-240px 0;}
+.vdigit-7{background-position:-280px 0;}
+.vdigit-8{background-position:-320px 0;}
+.vdigit-9{background-position:-360px 0;}

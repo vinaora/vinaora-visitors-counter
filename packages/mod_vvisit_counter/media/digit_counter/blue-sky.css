@@ -1,0 +1,21 @@
+/* blue-sky */
+.vdigit-0,
+.vdigit-1,
+.vdigit-2,
+.vdigit-3,
+.vdigit-4,
+.vdigit-5,
+.vdigit-6,
+.vdigit-7,
+.vdigit-8,
+.vdigit-9{width:18px;height:21px;background:url(blue-sky.png) no-repeat top left;text-indent:-999em;display:inline-block;}
+.vdigit-0{background-position:0 0;}
+.vdigit-1{background-position:-36px 0;}
+.vdigit-2{background-position:-72px 0;}
+.vdigit-3{background-position:-108px 0;}
+.vdigit-4{background-position:-144px 0;}
+.vdigit-5{background-position:-180px 0;}
+.vdigit-6{background-position:-216px 0;}
+.vdigit-7{background-position:-252px 0;}
+.vdigit-8{background-position:-288px 0;}
+.vdigit-9{background-position:-324px 0;}

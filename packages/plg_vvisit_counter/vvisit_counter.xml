@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="system">
+	<name>plg_vvisit_counter</name>
+	<author>VINAORA</author>
+	<creationDate>Apr 2012</creationDate>
+	<copyright>Copyright (C) 2007-2012 VINAORA. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>info@vinaora.com</authorEmail>
+	<authorUrl>http://vinaora.com</authorUrl>
+	<version>2.5.0</version>
+	<description>PLG_VVISIT_COUNTER_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="vvisit_counter">vvisit_counter.php</filename>
+		<filename>index.html</filename>
+		<folder>helper</folder>
+		<folder>language</folder>
+		<folder>sql</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.plg_system_vvisit_counter.ini</language>
+		<language tag="en-GB">language/en-GB.plg_system_vvisit_counter.sys.ini</language>
+	</languages>
+	<install>
+		<sql>
+			<file driver="mysql">sql/install.mysql.noutf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql">sql/unistall.mysql.noutf8.sql</file>
+		</sql>
+	</uninstall>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="onbackend" type="radio" default="0" label="PLG_VVISIT_COUNTER_FIELD_ONBACKEND" description="PLG_VVISIT_COUNTER_FIELD_ONBACKEND_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

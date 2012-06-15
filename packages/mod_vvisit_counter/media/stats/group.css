@@ -1,0 +1,15 @@
+/* group 14px */
+.vstats-vall,
+.vstats-vlmonth,
+.vstats-vlweek,
+.vstats-vxmonth,
+.vstats-vtoday,
+.vstats-vxweek,
+.vstats-vyesterday{width:14px;height:14px;background:url(group.png) no-repeat top left;text-indent:-999em;display:inline-block;}
+.vstats-vall{background-position:0 0;}
+.vstats-vlmonth{background-position:-28px 0;}
+.vstats-vlweek{background-position:-56px 0;}
+.vstats-vxmonth{background-position:-84px 0;}
+.vstats-vtoday{background-position:-112px 0;}
+.vstats-vxweek{background-position:-140px 0;}
+.vstats-vyesterday{background-position:-168px 0;}
