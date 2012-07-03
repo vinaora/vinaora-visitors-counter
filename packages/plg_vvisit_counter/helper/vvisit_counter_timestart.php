@@ -25,7 +25,7 @@ class plgVVisitCounterTimeStartHelper{
 		$this->sunday = (int) $sunday;
 
 		$now = (int) $now;
-		$now = ($now) ? $now : mktime();
+		$now = ($now) ? $now : time();
 		$this->now = $now;
 	}
 
@@ -47,6 +47,7 @@ class plgVVisitCounterTimeStartHelper{
 		$year			= (int) gmstrftime( "%Y", $now );
 
 		// Determine Starting GMT Time and Local Time of Today
+		// Beware gmmktime() >> http://groups.drupal.org/node/4838
 		$todaystart			= gmmktime( 0,0,0,$month,$day,$year );
 		$local_todaystart	= $this->localTimeStart( $todaystart, "day");
 

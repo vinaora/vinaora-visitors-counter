@@ -29,7 +29,7 @@ class plgSystemVVisit_Counter extends JPlugin
 		$onbackend = $this->params->get('onbackend', 0);
 		if ( !$onbackend && (JPATH_BASE !== JPATH_ROOT) ) return;
 
-		$now		= mktime();
+		$now		= time();
 		$lasttime	= plgVVisitCounterHelper::getLastTime();
 		$visit_type	= plgVVisitCounterHelper::visitType();
 		
