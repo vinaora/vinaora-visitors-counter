@@ -1,5 +1,5 @@
-Vinaora Nice Slideshow
-======================
+Vinaora Visitors Counter
+========================
 
 * Homepage: http://vinaora.com/vinaora-visitors-counter/
 * Demo: http://demo.vinaora.com/vinaora-visitors-counter/
